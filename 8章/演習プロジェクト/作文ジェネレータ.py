@@ -4,7 +4,7 @@ import re
 
 
 def is_vowel(word):
-    regex = re.compile(r'^[AIUEO]+')
+    regex = re.compile(r'[AIUEO]+')
     if regex.match(word):
         return True
     else:
