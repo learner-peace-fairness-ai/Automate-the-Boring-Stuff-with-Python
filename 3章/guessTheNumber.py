@@ -1,5 +1,6 @@
 # 数当てゲーム
 import random
+
 secret_number = random.randint(1, 20)
 print('1から20までの数を当ててください。')
 
