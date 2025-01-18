@@ -1,5 +1,6 @@
 import re
 
+
 def strip_by_regular_expression(s, chars=None):
     if chars:
         tgt = chars
