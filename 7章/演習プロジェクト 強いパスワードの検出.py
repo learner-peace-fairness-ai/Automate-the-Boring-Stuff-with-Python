@@ -1,5 +1,6 @@
 import re
 
+
 def is_strong_password(s):
     more_than_8characters_regex = re.compile(r'.{8,}')
     if more_than_8characters_regex.search(s) is None:
