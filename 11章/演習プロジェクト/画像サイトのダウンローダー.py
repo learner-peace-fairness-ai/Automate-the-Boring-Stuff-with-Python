@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+from urllib.parse import urlparse
 
 import requests
 from selenium import webdriver
@@ -49,7 +50,7 @@ image_list = get_images(driver, wait)
 
 for i, image in enumerate(image_list):
     src_url = image.get_attribute('src')
-    file_extension = Path(src_url).suffix
+    file_extension = Path(urlparse(src_url).path).suffix
 
     response = requests.get(src_url)
     if response.status_code == 200:
